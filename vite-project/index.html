@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> series da glitch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #6b79e7 0%, #da9ae7 100%);
+            color: #ffffff;
+        }
+        
+        .series-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            position: relative;
+            height: 400px;
+        }
+        
+        .series-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(20, 1, 90, 0.3);
+        }
+        
+        .series-cover {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: filter 0.3s ease;
+        }
+        
+        .series-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0) 100%);
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .series-card.active .series-cover {
+            filter: brightness(0.4);
+        }
+        
+        .series-card.active .series-info {
+            transform: translateY(0);
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="py-6 px-4 md:px-8 lg:px-16">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <h3 class="ml-4 text-4xl font-bold text-white">series da glitch production</h3>
+            </div>
+            <nav></nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 md:px-8 lg:px-16 py-8">
+        <h2 class="text-4xl font-bold mb-8">As mais famosas</h2>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- murder drones -->
+            <div class="series-card rounded-lg bg-gray-800">
+              <div class="w-full h-full">
+                <svg class="series-cover" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <pattern id="imagePattern1" patternUnits="userSpaceOnUse" width="400" height="600">
+                        <image href="img/murderdrones.jfif" x="0" y="0" width="400" height="600" />
+                      </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#imagePattern1)" />
+                    <text x="50%" y="50%" font-family="Poppins" font-size="40" font-weight="bold" text-anchor="middle" fill="white">murder drones</text>
+                  </svg>
+              </div>
+                <div class="series-info">
+                    <h3 class="text-xl font-bold mb-2">muder drones</h3>
+                    <div class="mb-3">
+                        <span class="badge bg-cyan-500">apocalipse</span>
+                        <span class="badge bg-cyan-500">msterio</span>
+                        <span class="badge bg-cyan-500">animação</span>
+                    </div>
+                    <p class="text-sm text-gray-300 mb-2">Em um exoplaneta pós-apocalíptico, drones trabalhadores constroem uma nova civilização enquanto se escondem dos rebeldes Drones Assassinos. Um robô de serviço e um robô assassino tornam-se amigos e trabalham juntos para escapar do planeta.</p>
+                    <div class="flex items-center text-sm text-gray-400">
+                        <span class="mr-2">lançado em 9 de outubro de 2021</span>
+                        <span class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-500 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            98/100
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- digital circus -->
+            <div class="series-card rounded-lg bg-gray-800">
+                <svg class="series-cover" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <pattern id="imagePattern2" patternUnits="userSpaceOnUse" width="400" height="600">
+                        <image href="./img/digitalcircus.jfif" x="0" y="0" width="400" height="600" />
+                      </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#imagePattern2)" />
+                    <text x="50%" y="50%" font-family="Poppins" font-size="40" font-weight="bold" text-anchor="middle" fill="white">digital circus</text>
+                  </svg>
+                  <div class="series-info">
+                    <h3 class="text-xl font-bold mb-2">digital circus</h3>
+                    <div class="mb-3">
+                        <span class="badge bg-rose-400">humor</span>
+                        <span class="badge bg-blue-600">animação</span>
+                    </div>
+                    <p class="text-sm text-gray-300 mb-3">"The Amazing Digital Circus" é uma série animada indie para adultos que acompanha um grupo de humanos presos em um mundo digital com tema de circo. A série explora a experiência de estar aprisionado em um jogo de realidade virtual, com os personagens lidando com seus traumas e conflitos pessoais.</p>
+                    <div class="flex items-center text-sm text-gray-400">
+                        <span class="mr-3">lançado em 13 de outubro de 2023</span>
+                        <span class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-500 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            92/100
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- distrito -->
+            <div class="series-card rounded-lg bg-gray-800">
+                <div class="w-full h-full">
+                  <svg class="series-cover" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <pattern id="imagePattern3" patternUnits="userSpaceOnUse" width="400" height="600">
+                          <image href="./img/distrito.jfif" x="0" y="0" width="400" height="600" />
+                        </pattern>
+                      </defs>
+                      <rect width="100%" height="100%" fill="url(#imagePattern3)" />
+                      <text x="50%" y="50%" font-family="Poppins" font-size="40" font-weight="bold" text-anchor="middle" fill="white">distrito dos lampejos</text>
+                    </svg>
+                </div>
+                  <div class="series-info">
+                      <h3 class="text-xl font-bold mb-2">distrito dos lampejos</h3>
+                      <div class="mb-3">
+                          <span class="badge bg-green-600">animação</span>
+                          <span class="badge bg-green-600">drama</span>
+                          <span class="badge bg-green-600">ação</span>
+                      </div>
+                      <p class="text-sm text-gray-300 mb-3">"O Distrito dos Lampejos" (The Gaslight District) é uma web série de animação da Glitch, criada por Nick Szopko e produzida em parceria com a GLITCH Productions e a Screen Australia. A história acompanha uma família de mortos-vivos que se esforça para sobreviver num mundo pós-apocalíptico, usando truques, mentiras e roubos.</p>
+                      <div class="flex items-center text-sm text-gray-400">
+                          <span class="mr-3">lançado em 18 de abril de 2025</span>
+                          <span class="flex items-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-500 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              83/100
+                          </span>
+                      </div>
+                  </div>
+              </div>
+              
+            </style>
+
+              <!-- cavaleiros de guineverer -->
+            <div class="series-card rounded-2g bg-gray-800">
+                <div class="w-full h-full">
+                  <svg class="series-cover" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <pattern id="imagePattern4" patternUnits="userSpaceOnUse" width="400" height="600">
+                          <image href="./img/Knights_of_Guinevere_Poster.webp" x="0" y="0" width="400" height="600" />
+                        </pattern>
+                      </defs>
+                      <rect width="100%" height="100%" fill="url(#imagePattern4)" />
+                      <text x="50%" y="50%" font-family="Poppins" font-size="40" font-weight="bold" text-anchor="middle" fill="white">knights of guineverer</text>
+                    </svg>
+                </div>
+                  <div class="series-info">
+                      <h3 class="text-xl font-bold mb-2">cavaleiros de guineverer</h3>
+                      <div class="mb-3">
+                        <span class="badge bg-green-300">animação</span>
+                        <span class="badge bg-yellow-300">suspense psicológico</span>
+                        <span class="badge bg-blue-300">ficção científica</span>
+                      <p class="text-sm text-gray-300 mb-2">Knights of Guinevere é uma futura série de suspense psicológico e ficção científica adulta australiana-americana criada por Dana Terrace, criadora de The Owl House.</p>
+                      <div class="flex items-center text-sm text-gray-400">
+                          <span class="mr-2">ainda não lançou</span>
+                          <span class="flex items-center">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-500 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                              </svg>
+                              ?/100
+                          </body>
+                      </div>
+                  </div>
+              </div>
+            
+
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+          <!--------------- biografia ----------------->
+
+    <footer class="bg-gray-800 py-8 mt-16">
+        <div class="container mx-auto px-4 md:px-8 lg:px-16">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-6 md:mb-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-rose-500" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm3 2h6v4H7V5zm8 8v2h1v-2h-1zm-2-8h1v2h-1V5zm-2 8h1v2h-1v-2zm-2 0h1v2h-1v-2zm-2 0h1v2H9v-2zm-2 0h1v2H7v-2z" clip-rule="evenodd" />
+                    </svg>
+                    <h1 class="ml-2 text-xl font-bold text-white">A Glitch Productions é um estúdio de animação independente australiano fundado pelos irmãos Kevin e Luke Lerdwichagul, com sede em Sydney. A empresa é conhecida por produzir séries animadas para a web, como SMG4, Meta Runner, Sunset Paradise, Murder Drones e The Amazing Digital Circus. Também trabalham em projetos de live-action, como Hobo Bros e Hitbox. A Glitch Productions busca mudar a forma como a animação ocidental é feita para adolescentes e jovens adultos. 
+                        Mais detalhes:
+                        Fundação: Em 2017, pelos irmãos Kevin e Luke Lerdwichagul. 
+                        Localização: Sydney, Austrália. 
+                        Conhecida por: Séries animadas como SMG4, Meta Runner, Sunset Paradise, Murder Drones e The Amazing Digital Circus. 
+                        Objetivo: Mudar a forma como a animação ocidental é feita para adolescentes e jovens adultos. 
+                        Canais no YouTube: SMG4 (com mais de 5 milhões de assinantes), Glitch (com mais de 1 milhão de assinantes). 
+                        Acordo com o Prime Video: Em maio de 2025, foi anunciado que Murder Drones seria adicionado ao Prime Video, com futuros projetos da Glitch também sendo exibidos na plataforma, além do YouTube. 
+                        Em 21 de fevereiro de 2020
+                        </h1>
+                </div>
+                
+                </div>
+            </div>
+            <div class="mt-8 text-center text-gray-500 text-sm">
+                &copy; a glitch produziu series de 2021 a 2025
+            </div>
+        </div>
+    </footer>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const seriesCards = document.querySelectorAll('.series-card');
+            
+            seriesCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    
+                    seriesCards.forEach(otherCard => {
+                        if (otherCard !== this) {
+                            otherCard.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9471a21034dbfefc',t:'MTc0ODQ3NjAwNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
