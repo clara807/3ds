@@ -10,7 +10,7 @@ background-image: url('./img/minecraft.jpg');
 
   grid-template-columns: 1fr 3fr; /* Menu e conteúdo */ 
 
-  grid-template-rows: auto 1fr auto; /* Header, conteúdo, e footer */ 
+  grid-template-rows: auto auto; /* Header, conteúdo, e footer */ 
 
   grid-template-areas:  
 
@@ -96,7 +96,10 @@ background-image: url('./img/minecraft.jpg');
 
 } 
 
- 
+.pagina2 {
+  color: aquamarine;
+}
+
 
 /* Responsividade */ 
 
